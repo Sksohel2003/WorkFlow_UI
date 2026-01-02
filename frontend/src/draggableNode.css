@@ -1,0 +1,53 @@
+.draggable-node {
+  position: relative;
+  min-width: 94px;
+  height: 42px;
+  padding: 0 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+
+  background: #e3cc8b; /* slate-50 */
+  border: 1px solid #e5e7eb;
+
+  color: #0f172a; /* dark text */
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: grab;
+
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease;
+}
+
+.node-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.node-label {
+  white-space: nowrap;
+}
+
+.draggable-node:hover {
+  background: #eef2ff; /* indigo-50 */
+  border-color: #6366f1;
+
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.15);
+
+  transform: translateY(-1px);
+}
+
+.draggable-node:active {
+  cursor: grabbing;
+  transform: translateY(0);
+}
+
+
