@@ -4,8 +4,8 @@ export const APINode = ({ id }) => {
   return (
     <BaseNode
       id={id}
-      badge="Input"
-      title="Utility"
+      title="API"
+      badge="Utility"
       variant="node-api"
       inputs={[{ id: 'request' }]}
       outputs={[{ id: 'response' }]}

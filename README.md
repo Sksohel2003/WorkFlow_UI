@@ -139,6 +139,13 @@ This project fulfills all requirements of the VectorShift technical assessment a
 
 The codebase is structured to be easy to understand, maintain, and extend.
 
+## Images
+
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+
 ## Author
 **Ferrari Sohel**
 ***Full-Stack Developer***
