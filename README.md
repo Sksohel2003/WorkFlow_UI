@@ -31,11 +31,11 @@ uvicorn main:app --reload
 
 **Runs at: http://localhost:8000**
 
-Part 1: Node Abstraction
+## Part 1: Node Abstraction
 
 One of the first problems addressed was the large amount of duplicated code across different node components. To solve this, a reusable BaseNode abstraction was introduced.
 
-***What was done:***
+**What was done:**
 
 - Created a BaseNode component to handle layout, handles, styling, and common behavior
 
@@ -55,7 +55,7 @@ Added five new node types to demonstrate scalability:
 
 This approach makes it easy to create new nodes without rewriting common logic.
 
-**Part 2: Styling and UI Design**
+## Part 2: Styling and UI Design
 
 The initial UI had minimal styling, so effort was put into creating a clean and professional look similar to real workflow tools.
 
@@ -71,25 +71,25 @@ The initial UI had minimal styling, so effort was put into creating a clean and 
 
 - Node type badges (e.g., INPUT, LOGIC, TEXT) for quick recognition
 
-- The result is a unified design that remains simple and easy to use.
+The result is a unified design that remains simple and easy to use.
 
-**Part 3: Text Node Logic**
+## Part 3: Text Node Logic
 
 The Text node required additional functionality beyond basic input handling.
 
-**Enhancements made:**
+### Enhancements made:
 
-Text input automatically resizes as the user types
+- Text input automatically resizes as the user types
 
-Node layout updates correctly using ReactFlow’s useUpdateNodeInternals
+- Node layout updates correctly using ReactFlow’s useUpdateNodeInternals
 
-Variables written as {{variable}} are detected in real time
+- Variables written as {{variable}} are detected in real time
 
-Each detected variable creates a corresponding input handle on the node
+- Each detected variable creates a corresponding input handle on the node
 
 This makes the Text node flexible and dynamic while keeping the implementation clean.
 
-Part 4: Backend Integration
+## Part 4: Backend Integration
 
 The frontend is connected to a FastAPI backend to validate the pipeline structure.
 
@@ -97,7 +97,7 @@ The frontend is connected to a FastAPI backend to validate the pipeline structur
 
 Frontend sends the list of nodes and edges on submit
 
-***Backend counts:***
+### Backend counts:
 
 - Total number of nodes
 
