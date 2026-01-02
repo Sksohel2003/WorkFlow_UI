@@ -10,6 +10,42 @@ The application allows users to build a pipeline by dragging nodes onto a canvas
 
 The focus was not just on making the application work, but on designing it in a way that would be easy to extend and maintain as more node types or features are added.
 
+### folder Structure
+```
+VectorShift/
+│
+├── backend/
+│ └── main.py # FastAPI backend for pipeline validation
+│
+└── frontend/
+├── public/ # Static assets
+│
+├── src/
+│ ├── nodes/ # All node components and BaseNode abstraction
+│ │ ├── BaseNode.jsx
+│ │ ├── inputNode.js
+│ │ ├── outputNode.js
+│ │ ├── llmNode.js
+│ │ ├── textNode.js
+│ │ ├── mathNode.js
+│ │ ├── conditionNode.js
+│ │ ├── delayNode.js
+│ │ ├── apiNode.js
+│ │ └── loggerNode.js
+│ │
+│ ├── App.jsx # Root application component
+│ ├── ui.js # ReactFlow canvas and interactions
+│ ├── toolbar.js # Node selection toolbar
+│ ├── draggableNode.js # Draggable toolbar node UI
+│ ├── submit.js # Submit button and backend integration
+│ ├── store.js # Global state management (Zustand)
+│ ├── index.css # Global styles
+│ └── index.js # Application entry point
+│
+├── package.json
+└── package-lock.json
+```
+
 ---
 
 ## Running the Project
